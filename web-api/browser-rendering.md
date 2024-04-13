@@ -6,8 +6,9 @@
 
 웹 페이지가 처음 표시될 때까지의 중요한 단계를 이야기 한다. 사용자에게 첫 화면이 빨리 표시되도록 하는 데 중점을 둔 렌더링 과정의 핵심 부분이다. 
 
-![Critical Rendering Path](https://raw.githubusercontent.com/devvara/support-repo/media/images/log/web-api/browser-rendering.png)
+![Critical Rendering Path](https://raw.githubusercontent.com/devvara/support-repo/master/media/images/log/web-api/browser-rendering.png)
 
+<br/>
 
 1. HTML 파싱 및 DOM 트리 구축
    브라우저가 HTML 문서를 읽고 DOM 트리를 생성한다. 이 트리는 웹 페이지의 구조적 표현으로, 각 HTML 요소를 노드로 포함한다.
@@ -23,7 +24,9 @@
 6. 합성(다양한 레이어 합성)
    페인팅 단계까지 여러 레이어로 구성된 요소들을 하나의 페이지로 합성하여 최종적으로 사용자에게 표시한다.
 
-![Critical Rendering Path](https://raw.githubusercontent.com/devvara/support-repo/media/images/log/web-api/browser-rendering-layout.png)
+<br/>
+
+![Critical Rendering Path](https://raw.githubusercontent.com/devvara/support-repo/master/media/images/log/web-api/browser-rendering-layout.png)
 
 - 왼쪽이 DOM 트리, 오른쪽이 랜더 트리
 
