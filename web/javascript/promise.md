@@ -29,3 +29,60 @@ let promise = new Promise(function(resolve, reject) {
   }
 })
 ````
+
+## Promise 사용
+
+Promise 객체는 `then`, `catch`, `finally` 메소드를 사용하여 결과나 오류를 처리한다.
+
+- then(): Promise가 성공적으로 완료되었을 때 실행될 함수
+- catch(): Promise가 실패했ㅇ르 때 실핼될 함수
+- finally(): Promise의 성공/실패 여부에 관계없이 실행되는 함수, 리소스를 정리하느 코드를 넣는다.
+  
+````javascript
+promise
+  .then(function(result) {
+    console.log('성공:', result);
+  })
+  .catch(function(error) {
+    .console.error('실패:', error);
+  })
+  .finally(function() {
+    console.log('작업 완료');
+  });
+````
+
+## Promise 체이닝
+
+Promise 객체는 `then` 메소드에서 다른 Promise를 반환할 수 있어 여러 비동기 작업을 순차적으로 실행할 수 있다. 리를 통해 비동기 작업을 체이닝 할 수 있다.
+
+````javascript
+doSomething()
+  .then(function(result) {
+    return doSomethingElse(result);
+  })
+  .then(function(newResult) {
+    return doThirdThing(newResult);
+  })
+  .then(function(finalResult) {
+    console.log('최종 결과:', finalResult);
+  })
+  .catch(failureCallback);
+````
+
+`catch`를 통해 `then` 호출에서 걸쳐 발행할 수 있는 어떤 에러도 처리할 수 있다.
+
+## Promise 정적 메소드
+
+- Promise.all(): 여러 Promise들을 병렬로 실행하고 모든 Promise들이 완료될 때까지 기다린다. 모든 Promise들이 성공적으로 완료되면, 각 Promise의 결과값들을 배열로 반환한다.
+- Promise.race(): 여러 Promise 중 가장 먼저 완료되는 Promise의 결과값 또는 에러를 반환한다.
+- Promise.resolve()와 Promise.reject(): 각각 즉시 이행 또는 거부되는 Promise 객체를 생성한다.
+
+````javascript
+Promise.all([promise1, promise2, promise 3])
+  .then(results => {
+    console.log(results);
+  })
+  .catch(error => {
+    console.error(error);
+  });
+````
