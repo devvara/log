@@ -24,7 +24,7 @@ console.log(sayHello("Sujin")); // "Hello, Sujin!"
 console.log(sayGoodbye("Minzun")); // "Goodbye, Minzun!"
 ````
 
-위 코드에서 `createGreeting` 함수는 문자열 `greeting`을 인자로 받고, 다른 함수를 반환한다. 반환된 함수는 `name`을 인자로 받아서 인사말을 완료한다. `createGreeting` 함수의 실행이 끝나고 반환된 함수(클로저)가 여전히 `greeting` 벼눗에 접근할 수 있다.
+위 코드에서 `createGreeting` 함수는 문자열 `greeting`을 인자로 받고, 다른 함수를 반환한다. 반환된 함수는 `name`을 인자로 받아서 인사말을 완료한다. `createGreeting` 함수의 실행이 끝나고 반환된 함수(클로저)가 여전히 `greeting` 변수에 접근할 수 있다.
 
 자바스크립트의 함수는 자신이 선언될 때의 환경을 기억한다. 이 환경에는 함수가 접근할 수 있는 모든 지역 변수가 포함되는데 `createGreeting` 함수의 실행이 끝나더라도, 그 함수에 의해 생성된 클로저는 `greeting` 변수에 대한 참조를 유지한다. 
 
