@@ -20,7 +20,7 @@
 
 ## RESTful API (Representational State Transfer)
 
-RESTful API는 웹 애플리케이션과 서버 간의 상호작용을 하기 위해 설계된 소프트웨어 아키텍처 스타일의 API로 웹 서비스를 만들 때 지키면 좋은 가이드 라인을 가지고 있는 아이이다.
+RESTful API는 웹 애플리케이션과 서버 간의 상호작용을 하기 위해 설계된 소프트웨어 아키텍처 스타일의 API로 웹 서비스를 만들 때 지키면 좋은 가이드 라인을 가지고 있다.
 
 REST를 잘 지키기 위한 핵심 원칙
 
@@ -35,3 +35,25 @@ REST를 잘 지키기 위한 핵심 원칙
    클라이언트가 원한다면 서버는 클라이언트가 실행할 수 있는 코드를 클라이어늩에 보내줄 수 있다. 
 6. Uniform Interface
    RESTful한 시스템인지 아닌지를 결정하는 중요한 요소로 API 설계는 일관된 인터페이스를 가져야 한다. 리소스는 고유한 URI로 식별하고 HTTP 메서드(GET, POST, PUT, DELETE 등)를 사용하여 리소스에 대한 작업을 수행한다.
+
+주요 구성 요소
+
+1. 자원(Resource)
+   각 자원은 고유한 URI를 통해 식별된다. 
+2. HTTP 메서드(HTTP Methods)
+   자원에 대한 다양한 동작을 정의하는 데 사용된다.
+   - GET: 자원 조회
+   - POST: 자원 생성
+   - PUT: 기존 자원의 전체 업데이트
+   - PATCH: 기존 자원의 부분 업데이트
+   - DELETE: 자원 삭제
+3. 표현(Representations)
+   자원은 JSON, XML 등 다양한 형식으로 표현될 수 있다. 클라이언트와 서버는 표현 형식을 협상하여 결정한다.
+4. 상태 코드(State Codes)
+   요청 결과를 나타내는 데 사용된다.
+   - 200: 요청 성공(OK)
+   - 201: 자원 생성 성공(Created)
+   - 400: 잘못된 요청(Bad Request)
+   - 401: 인증 필요(Unauthorized)
+   - 404: 자원 없음(Not Found)
+   - 500: 서버 오류(Internal Server Error) 
